@@ -1,0 +1,85 @@
+
+.card {
+    position: relative;
+    word-break: break-all;
+    box-shadow: 1px 1px 3px 0.1px grey;
+    border-radius: 1px;
+    padding: 16px 8px;
+    padding-left: 24px;
+    margin: 8px 8px;
+    display: flex;
+    background-color: var(--item-background);
+    color: var(--item-color);
+}
+
+.card > div {
+    width: 100px;
+}
+
+.card > span {
+    width: 100%;
+}
+p {
+    margin: 0
+}
+
+
+button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px dashed var(--item-border);
+    outline: none !important;
+    box-shadow: 0.2px 0.2px 3px 0.01px grey;
+    margin-right: 8px;
+    cursor: pointer;
+    transition-duration: .5s;
+    transition-property: transform;
+}
+
+.del {
+    background-color: var(--item-delete);
+}
+
+.edit {
+    background-color: var(--item-edit);
+}
+
+.save {
+    background-color: var(--item-save);
+}
+
+button:hover {
+    transform: rotate(15deg);
+}
+
+input {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.action {
+    display: block;
+}
+
+.edit-action {
+    display: none;
+}
+
+.edit-mode .edit-action {
+    display: block;
+}
+
+.edit-mode .action {
+    display: none;
+}
+
+a {
+    color: var(--ui-color-link)
+}
+
+a:hover,
+a:active {
+    color: var(--ui-color-link-hover)
+}

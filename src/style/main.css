@@ -1,0 +1,58 @@
+
+* {
+    user-select: none;
+}
+
+@font-face {
+    font-family: MuliItalic;
+    src: url(Muli-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Muli;
+    src: url(Muli-VariableFont_wght.ttf);
+}
+
+html, body {
+    margin: 0; padding: 0;
+    font-family: 'Muli';
+}
+
+body {
+    background-color: var(--ui-background);
+    height: 100vh;
+}
+
+.animation-appear {
+    opacity: 0;
+    animation-name: appear;
+    animation-delay: .4s;
+    animation-fill-mode: forwards;
+    animation-duration: .6s;
+    
+}
+
+.container {
+    max-width: 1195px;
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+daily-theme-chooser {
+    width: max-content;
+    display: block;
+}
+
+.d-block {
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+    
+}

@@ -1,0 +1,10 @@
+
+code {
+    cursor: pointer;
+    color: var(--ui-color-link);
+}
+
+code:hover {
+    font-weight: bold;
+    color: var(--ui-color-link-hover);
+}

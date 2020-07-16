@@ -1,0 +1,35 @@
+.input-field {
+    position: relative;
+    margin: 36px 11px 14px;
+}
+
+.add-label {
+    color: dodgerblue;
+}
+
+input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--adder-border);
+    background: transparent;
+    color: var(--adder-color);
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+label {
+    position: absolute;
+    left: .5em;
+    top: .5em;
+    color: var(--adder-color);
+    transition: all .2s;
+}
+
+input:valid ~ label,
+input:focus ~ label {
+    left: .8em;
+    top: -1.5em;
+    font-size: 11px;
+}

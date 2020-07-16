@@ -1,0 +1,16 @@
+
+section {
+    background-color: var(--card-background);
+    padding: 1rem .5rem;
+    box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, .3);
+    border-radius: 2px;
+}
+
+section strong {
+    color: var(--ui-color-subtitle);
+}
+
+section ul {
+    margin: 0;
+    padding: .5rem;
+}

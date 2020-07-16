@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon.png">
+    <title>Your Daily StandUp</title>
+    <link rel="stylesheet" href="./src/style/animations.css" />
+    <link rel="stylesheet" href="./src/style/bootstrap_lite.css">
+    <link rel="stylesheet" href="./src/style/main.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js"></script>
+    <script type="module" src="./src/com/init.js"></script>
+</head>
+<body>
+
+  <template id="Timer">
+    <link rel="stylesheet" href="./src/com/Timer/main.css" />
+    <time></time>
+  </template>
+
+  <template id="Dater">
+    <link rel="stylesheet" href="./src/com/Dater/main.css" />
+    <time></time>
+  </template>
+
+  <template id="Li">
+    <link rel="stylesheet" href="./src/com/Li/main.css" />
+    <div class="card" draggable="true">
+      <span class="action"></span>
+      <input class="edit-action" type="text" />
+      <div class="action">
+        <button class="del"></button>
+        <button class="edit"></button>
+      </div>
+      <div class="edit-action">
+        <button style="visibility: hidden;"></button>
+        <button class="save"></button>
+      </div>
+    </div>
+  </template>
+
+  <template id="Adder">
+    <link rel="stylesheet" href="./src/com/Adder/main.css" />
+    <form autocomplete="off">
+      <div class="input-field">
+        <input required="required" id="addTodo" type="text" />
+        <label for="addTodo">I will..</label>
+      </div>
+    </form>
+  </template>
+
+  <template id="Ul">
+    <link rel="stylesheet" href="./src/com/Ul/main.css" />
+    <div>
+      <ul></ul>
+    </div>
+  </template>
+
+  <template id="Exporter">
+    <link rel="stylesheet" href="./src/com/Exporter/main.css" />
+    <code>Export</code>
+  </template>
+
+  <template id="Note">
+    <link rel="stylesheet" href="./src/com/Note/main.css" />
+    <article class="bg">
+      <h1 class="name"></h1>
+      <div class="overflow-hidden flex content"></div>
+    </article>
+  </template>
+
+  <template id="Theme">
+    <link rel="stylesheet" href="./src/com/Theme/main.css" />
+    <article>
+      <span></span> <p></p>
+    </article>
+  </template>
+
+  <template id="ThemeChooser">
+    <link rel="stylesheet" href="./src/com/ThemeChooser/main.css" />
+    <section>
+      <strong>Change theme</strong>
+      <ul></ul>
+    </section>
+  </template>
+
+  <section class="container animation-appear">
+
+      <header class="mt-4">
+        <daily-date></daily-date>
+        <daily-time></daily-time>
+        <daily-exporter></daily-exporter>
+        <daily-theme-chooser class="my-3"></daily-theme-chooser>
+      </header>
+
+      <main>
+        <daily-note name="Ayer" class="mb-4 d-block">
+          <daily-ul id="done" label="Trabajé en.."></daily-ul>
+        </daily-note>
+
+        <daily-note name="Hoy" class="mb-4 d-block">
+          <daily-ul id="todo" label="Haré.."></daily-ul>
+        </daily-note>
+
+        <daily-note name="Stoppers" class="mb-4 d-block">
+          <daily-ul id="stoppers" label="Me trabé por.."></daily-ul>
+        </daily-note>
+
+      </main>
+
+  </section>
+
+</body>
+</html>

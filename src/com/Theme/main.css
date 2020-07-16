@@ -1,0 +1,37 @@
+
+article {
+    display: flex;
+    align-items: center;
+}
+
+article:not(.selected) {
+    cursor: pointer;
+}
+
+article span {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px 0px rgba(0,0,0,.5);
+    margin-right: 4px;
+}
+
+article.selected span {
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.5);
+}
+
+article p {
+    display: inline;
+    margin: 4px;
+    color: var(--ui-color-link);
+}
+
+article:hover p {
+    color: var(--ui-color-link-hover);
+}
+
+article.selected p {
+    font-weight: bold;
+}

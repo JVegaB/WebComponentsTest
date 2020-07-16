@@ -1,0 +1,36 @@
+article {
+    flex-basis: 40%;
+    padding: .5rem;
+    background-color: var(--card-background);
+    box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, .3);
+    border-radius: 2px;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 17px 0 0 14px;
+    font-weight: 400;
+    color: var(--card-color-title);
+}
+
+article > div.flex {
+    flex-direction: column;
+}
+
+article .flex ul {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 290px;
+}
+
+article .flex div {
+    flex-basis: 20%;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
