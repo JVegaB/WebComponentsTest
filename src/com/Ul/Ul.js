@@ -1,13 +1,14 @@
 
+import { Component } from '../Com/Component.js';
 import { Storage } from '../../tools/Storage.js';
 
 
-class Ul extends HTMLElement {
+class Ul extends Component {
+
+    static template = 'Ul'
 
     constructor () {
         super();
-        this.shadow = this.attachShadow({mode: 'closed'});
-        this.shadow.appendChild(document.getElementById('Ul').content.cloneNode(true));
         this.storage = new Storage({ storageKey: this.attributes.id.value });
         this.renderElement();
         this.renderSubmit();

@@ -1,13 +1,12 @@
 
+import { Component } from '../Com/Component.js';
 import { File } from '../../tools/File.js';
 
-class Exporter extends HTMLElement {
-    constructor () {
-        super();
-        this.shadow = this.attachShadow({mode: 'closed'});
-        this.shadow.appendChild(document.getElementById('Exporter').content.cloneNode(true));
-        this.shadow.querySelector('code').onclick = this.exportDaily.bind(this);
-    }
+
+class Exporter extends Component {
+
+    static template = 'Exporter'
+    static events = { 'onclick code': 'exportDaily' }
 
     exportDaily () {
         const content = Array.from(document.querySelectorAll('daily-ul')).map(

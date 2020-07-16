@@ -1,11 +1,10 @@
 
-class Theme extends HTMLElement {
+import { Component } from '../Com/Component.js';
 
-    constructor () {
-        super();
-        this.shadow = this.attachShadow({mode: 'closed'});
-        this.shadow.appendChild(document.getElementById('Theme').content.cloneNode(true));
-    }
+
+class Theme extends Component {
+
+    static template = 'Theme';
 
     set onclick (listener) {
         this.shadow.querySelector('article').onclick = listener;

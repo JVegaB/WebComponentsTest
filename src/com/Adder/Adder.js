@@ -1,11 +1,12 @@
 
-class Adder extends HTMLElement {
+import { Component } from '../Com/Component.js';
 
-    constructor () {
-        super();
-        this.shadow = this.attachShadow({ mode: 'closed' });
-        this.shadow.appendChild(document.getElementById('Adder').content.cloneNode(true));
-        this.shadow.querySelector('form').onsubmit = this.addFromUi.bind(this);
+
+class Adder extends Component {
+
+    static template = 'Adder';
+    static events = {
+        'onsubmit form': 'addFromUi',
     }
 
     set label (value) {
@@ -17,7 +18,7 @@ class Adder extends HTMLElement {
         const input = ev.currentTarget.querySelector('input');
         const value = input.value;
         input.value = '';
-        if (value && this.addCallback) {
+        if (this.addCallback) {
             this.addCallback(value)
         }
     }

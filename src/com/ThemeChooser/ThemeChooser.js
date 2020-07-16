@@ -1,14 +1,15 @@
 
 import { Schemes } from '../../data/ThemeSchemes.js';
 import { ThemeManager } from '../../tools/ThemeManager.js';
+import { Component } from '../Com/Component.js';
 
 
-class ThemeChooser extends HTMLElement {
+class ThemeChooser extends Component {
+
+    static template = 'ThemeChooser'
 
     constructor () {
         super();
-        this.shadow = this.attachShadow({mode: 'closed'});
-        this.shadow.appendChild(document.getElementById('ThemeChooser').content.cloneNode(true));
         ThemeManager.init();
         this.render();
     }

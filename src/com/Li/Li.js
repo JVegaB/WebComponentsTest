@@ -1,13 +1,13 @@
 
+import { Component } from '../Com/Component.js';
 
-class Li extends HTMLElement {
 
-    constructor () {
-        super();
-        this.shadow = this.attachShadow({mode: 'closed'});
-        this.shadow.appendChild(document.getElementById('Li').content.cloneNode(true));
-        this.shadow.querySelector('.edit').onclick = this.editMode.bind(this, true);
-        this.shadow.querySelector('.save').onclick = this.saveValue.bind(this);
+class Li extends Component {
+
+    static template = 'Li'
+    static events = {
+        'onclick .edit': 'editMode',
+        'onclick .save': 'saveValue',
     }
 
     saveValue () {

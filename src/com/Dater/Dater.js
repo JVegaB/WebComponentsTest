@@ -1,10 +1,13 @@
 
-class Dater extends HTMLElement {
+import { Component } from '../Com/Component.js';
+
+
+class Dater extends Component {
+
+    static template = 'Dater'
 
     constructor () {
         super();
-        this.shadow = this.attachShadow({mode: 'closed'});
-        this.shadow.appendChild(document.getElementById('Dater').content.cloneNode(true));
         const timeTag = this.shadow.querySelector('time');
         const date = new Date().toLocaleDateString('es-MX', {
             weekday: 'long',
